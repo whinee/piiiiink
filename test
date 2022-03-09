@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -rf "screenshots/$1/"
 mkdir "screenshots/$1/"
 for i in tests/test.*
 do
@@ -8,5 +9,5 @@ do
   flameshot full -p "./screenshots/$1/${i##*.}.png"
   kill -s KILL $(pgrep code)
 done
-cd $1
+cd "screenshots/$1/"
 mogrify -crop 1366x715+0+53 -path . *.png

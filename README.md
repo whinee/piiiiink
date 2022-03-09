@@ -50,6 +50,13 @@ I only changed some colors to fit my needs, and fitted a new logo on it.
 
 You can see more [here](https://github.com/whinee/piiiiink/tree/master/screenshots/1.0.0).
 
+<sub>
+    <i>
+        <b>DISCLAIMER:</b> I do not take credit for the code used as a sample for the screenshots. I mostly own all of them. If it is not however, it is indicated otherwise, including the link to the source of the code.
+    </i>
+</sub>
+
+
 <!-- License section. Leave unchanged except when updating the year, using a different license, or changing the style altogether. -->
 ## **License**
 
