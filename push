@@ -63,10 +63,14 @@ def cmd(v: str, g: bool=False, publish: bool=False):
         cm = f"https://piiiiink.wh.rf.gd/changelog#v{str(cvp).replace('.', '_')}"
     
     if g:
-        run(f"git add . && git commit -am {cm} && git push")
+        run("git add .")
+        run(f"git commit -am {cm}")
+        run("git push")
         
     if publish:
-        run("vsce package --yarn && vsce publish && rm -rf *.visk")
+        run("vsce package --yarn")
+        run("vsce publish")
+        run("rm -rf *.visk")
 
 for i in vls:
     cmd = click.option(f'-{i}', 'v', flag_value=i)(cmd)

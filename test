@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mkdir "screenshots/$1/"
+for i in tests/test.*
+do
+  code --extensions-dir extensions -n "$i"
+  sleep 10
+  flameshot full -p "./screenshots/$1/${i##*.}.png"
+  kill -s KILL $(pgrep code)
+done
+cd $1
+mogrify -crop 1366x715+0+53 -path . *.png

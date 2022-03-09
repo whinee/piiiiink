@@ -44,6 +44,12 @@ This is a fork [hydr-theme](https://github.com/ArthurHydr/hydr-theme) made by [A
 
 I only changed some colors to fit my needs, and fitted a new logo on it.
 
+## **Screenshots**
+
+<img src="./screenshots/1.0.0/py.png">
+
+You can see more [here](https://github.com/whinee/piiiiink/tree/master/screenshots/1.0.0).
+
 <!-- License section. Leave unchanged except when updating the year, using a different license, or changing the style altogether. -->
 ## **License**
 
@@ -71,6 +77,6 @@ Made in <a target="_blank" href="https://freelogodesign.org/">FreeLogoDesigns</a
 
 <sub>
     <i>
-        <b>NOTE:</b> If a reference or source material is not attributed properly or not at all, please kindly message me at Discord: <a target="_blank" href="https://discord.com/users/867696753434951732">whi_ne#5135</a> or create a pull request so I can properly give credit to their respective authors.
+        <b>NOTE:</b> If a reference or source material is not attributed properly or not at all, raise an issue or create a pull request so I can properly give credit to their respective authors.
     </i>
 </sub>
