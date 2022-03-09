@@ -1,0 +1,75 @@
+#!/usr/bin/env python3.10
+import shlex
+from subprocess import call
+import json
+
+import click
+from semver import VersionInfo
+
+
+def run(s: str):
+    call(shlex.split(s))
+
+
+vls = ["M", "m", "p", "prb", "pr"]
+tl = {
+    "M": "major",
+    "m": "minor",
+    "p": "patch",
+}
+
+
+@click.command()
+@click.option('-g', is_flag=True)
+@click.option('--publish', is_flag=True)
+def cmd(v: str, g: bool=False, publish: bool=False):
+    cm = "push"
+    if v:
+        with open("package.json", "r") as f:
+            pj = json.load(f)
+            
+        cvp = VersionInfo.parse(pj["version"])
+            
+        rpr = cvp.prerelease
+        pn = rpr.split(".")[0] if rpr else None
+        if v == "pr":
+            if pn in ["alpha", "beta"]:
+                cvp = cvp.bump_prerelease()
+            else:
+                cvp = cvp.replace(prerelease="alpha.1")
+        elif v == "prb":
+            f.pr = "alpha"
+            if rpr:
+                if pn == "alpha":
+                    f.pr = "beta"
+                else:
+                    f.pr = None
+            else:
+                f.pr == "alpha"
+                cvp = cvp.bump_patch()
+            cvp = cvp.replace(prerelease=f"{f.pr}.1" if f.pr else None)
+        else:
+            cvp = getattr(cvp, f"bump_{tl[v]}")()
+
+        version = str(cvp)
+        pj["version"] = version
+
+        with open("package.json", "w") as f:
+            f.write(json.dumps(pj, indent=4))
+            
+        with open("version", "w") as f:
+            f.write(version)
+        
+        cm = f"https://piiiiink.wh.rf.gd/changelog#v{str(cvp).replace('.', '_')}"
+    
+    if g:
+        run(f"git add . && git commit -am {cm} && git push")
+        
+    if publish:
+        run("vsce package --yarn && vsce publish && rm -rf *.visk")
+
+for i in vls:
+    cmd = click.option(f'-{i}', 'v', flag_value=i)(cmd)
+
+if __name__ == "__main__":
+    cmd()

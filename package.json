@@ -1,0 +1,42 @@
+{
+    "name": "piiiiink",
+    "displayName": "piiiiink!",
+    "description": "Shio-chan~",
+    "version": "1.0.0",
+    "publisher": "whine",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/whinee/piiiiink"
+    },
+    "bugs": {
+        "url": "https://github.com/whinee/piiiiink/issues"
+    },
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+		"hydr",
+        "hy",
+        "hydr-theme",
+		"dark",
+		"theme",
+		"color-theme"
+    ],
+    "icon": "assets/logo-512.png",
+	"galleryBanner": {
+		"color": "#3c4557",
+		"theme": "dark"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "piiiiink!",
+                "uiTheme": "vs-dark",
+                "path": "./themes/piiiiink.json"
+            }
+        ]
+    }
+}
