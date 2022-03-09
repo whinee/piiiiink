@@ -40,7 +40,7 @@ Extension: [marketplace.visualstudio.com/items?itemName=whine.piiiiink](https://
 
 ## **Important**
 
-This is a fork [hydr-theme](https://github.com/ArthurHydr/hydr-theme) made by [Arthur Ottoni Ribeiro](https://github.com/ArthurHydr).
+This is a fork of [hydr-theme](https://github.com/ArthurHydr/hydr-theme), made by [Arthur Ottoni Ribeiro](https://github.com/ArthurHydr).
 
 I only changed some colors to fit my needs, and fitted a new logo on it.
 
