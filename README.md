@@ -2,6 +2,14 @@
     piiiiink!
 </h1>
 
+<p align="center">
+    <img src="./assets/cropped.png" width="300rem" height="auto" style="display: block; margin: auto;">
+</p>
+
+<p align="center">
+    <img src="./assets/piiiiink!.png" width="300rem" height="auto" style="display: block; margin: auto;">
+</p>
+
 <!-- Description. Preferrably 1 sentence long. -->
 <h3 align="center" style="font-weight: bold">
     Just your average HSL fanatic.
